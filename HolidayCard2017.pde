@@ -1,7 +1,7 @@
 ArrayList<snowflake> snowflakes;
 
 void setup() {
-  fullScreen();
+  size(1000,400);
   snowflakes = new ArrayList<snowflake>();
   for (int i = 0; i<180; i++) {
     snowflakes.add(new snowflake());
