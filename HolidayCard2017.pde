@@ -1,45 +1,54 @@
+ArrayList<snowflake> snowflakes;
 
-Snow [] s;
 void setup() {
-  size(800, 400);
-  s=new Snow[100];
-  for (int i=0; i<s.length; i++) {
-    s[i]= new Snow();
+  fullScreen();
+  snowflakes = new ArrayList<snowflake>();
+  for (int i = 0; i<180; i++) {
+    snowflakes.add(new snowflake());
   }
 }
 
 void draw() {
-  background(0);
-  for (int i=0; i<s.length; i++) {
-    s[i].addPhysics();
-    s[i].snow();
+  background(#1A1A1D);
+  for (int i =0; i<snowflakes.size(); i++) {
+    snowflakes.get(i).display();
+    snowflakes.get(i).fall();
+    snowflakes.get(i).revert();
   }
 }
+class snowflake{
+PVector velocity;
+  PVector loc;
+  float ang;
+  float r;
 
+  snowflake() {
+    loc = new PVector(random(-200, width+100), random(100, 500)*-1);
+    r = random(2, 8);
+    velocity = new PVector(0.8,r*.38);
+    ang = random(0, 360);
+  }
 
-class Snow {
-  float acceleration;
-  //float velocity=.2;
-  float velocity=(float)Math.random();
-  float xlocation;
-  float ylocation;
-  float xloc=(float)Math.random();
-  float yloc;
-  float s=(float)Math.random()*20;
-  float [] f;
-  Snow() {
-    //xlocation=(float)Math.random()*width;
-    xlocation=random(-4, width);
-    ylocation=0;
+  void fall() {
+    ang+=0.07;
+    loc.x+=.3*sin(ang);
+    loc.add(velocity);
   }
-  void addPhysics() {
-    yloc=acceleration+velocity;
-  }
-  void snow() {
-    fill(255, 255, 255);
-    ellipse(xlocation+=xloc, ylocation+=yloc, s, s);
-    if (ylocation>height) {
-      ylocation=0;
+
+  void revert() {
+    if (loc.y > height+50) {
+      loc.y = -50;
+      loc.x = random(-200, width+100);
     }
+  }
+
+  void display() {
+    if (r < 4) {
+      fill(#FFFFFF, 100);
+    } else {
+      fill(#FFFFFF);
+    }
+    noStroke();
+    ellipse(loc.x, loc.y, r, r);
   }
 }
