@@ -27,14 +27,14 @@ void setup() {
 
 void draw() {
   changeBackground();
-  christmasTree(250, 50);
-  present(173, 305);
-  snowman(400, 250);
-
   smr.displayPath();
   smr.drawSun();
   smr.drawMoon();
   smr.timeRotation();
+
+  christmasTree(250, 50);
+  present(173, 305);
+  snowman(400, 250);
 
   for (snowflake s : snowflakes) {
     s.display();
@@ -49,10 +49,6 @@ void draw() {
   text(" days & until Christmas!", 580, 100);
 }
 
-void mouseClicked() {
-  System.out.println(hour());
-}
-
 int daysTillChristmas() {
   if (month()==12) {
     return 25-day();
@@ -65,15 +61,15 @@ class sunMoonRotation {
   int pathrad, sunrad, moonrad, hour;
 
   sunMoonRotation() {
-    pathrad = 100;
-    sunrad = 20;
-    moonrad = 20;
+    pathrad = (width/2)+50;
+    sunrad = 45;
+    moonrad = 50;
     hour = hour();
   }
 
   void displayPath() {
     pushMatrix();
-    translate(width/2, height/2);
+    translate(width/2, height+200);
     noFill();
     stroke(51, 51, 51, 100);
     strokeWeight(2);
@@ -83,33 +79,24 @@ class sunMoonRotation {
 
   void drawMoon() {
     pushMatrix();
-    translate(width/2, height/2);
+    translate(width/2, height+200);
     fill(140);
     noStroke();
     moonx = pathrad*cos(radians(angle+180));//+180 moves it to the other side
     moony = pathrad*sin(radians(angle+180));
     ellipse(moonx, moony, moonrad*2, moonrad*2);
-    fill(160);
-    ellipse(moonx+6, moony, moonrad/2, moonrad/2);
-    ellipse(moonx-6, moony-9, moonrad/2.5, moonrad/2.5);
-    ellipse(moonx-7, moony+6, moonrad/3, moonrad/3);
-    ellipse(moonx+2, moony+12, moonrad/5, moonrad/5);
     popMatrix();
   }
 
   void drawSun() {
     pushMatrix();
-    translate(width/2, height/2);
+    translate(width/2, height+200);
     fill(#F7B633);
     noStroke();
     sunx = pathrad*cos(radians(angle));
     suny = pathrad*sin(radians(angle));
     ellipse(sunx, suny, sunrad*2, sunrad*2);
     translate(sunx, suny);
-    for (int ang = 0; ang<360; ang+=45) {
-      stroke(#F7B633);
-      line(0, 0, (sunrad+10)*cos(radians(ang)), (sunrad+10)*sin(radians(ang)));
-    }
     popMatrix();
   }
 
@@ -145,9 +132,7 @@ void changeBackground() {
   } else background(0);
 }
 
-void christmasTree(float x, float y) {
-  //SHADOW
-  noStroke();
+noStroke();
   fill(120, 120, 120, 60);
   ellipse(x, y+250, 140, 20);
 
