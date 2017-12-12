@@ -1,7 +1,7 @@
 ArrayList<light> lights;
 ArrayList<snowflake> snowflakes;
-PFont christmasfont1;
-PFont christmasfont2;
+//PFont christmasfont1;
+//PFont christmasfont2;
 sunMoonRotation smr;
 
 void setup() {
@@ -43,10 +43,10 @@ void draw() {
   }
 
   fill(255);
-  textFont(christmasfont2);
+  //textFont(christmasfont2);
   text(daysTillChristmas()+"", 517, 100);
   textFont(christmasfont1);
-  text(" days & until Christmas!", 580, 100);
+  //text(" days & until Christmas!", 580, 100);
 }
 
 int daysTillChristmas() {
