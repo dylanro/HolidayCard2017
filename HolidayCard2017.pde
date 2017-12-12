@@ -45,8 +45,8 @@ void draw() {
   fill(255);
   //textFont(christmasfont2);
   text(daysTillChristmas()+"", 517, 100);
-  textFont(christmasfont1);
-  //text(" days & until Christmas!", 580, 100);
+  //textFont(christmasfont1);
+  text(" days & until Christmas!", 580, 100);
 }
 
 int daysTillChristmas() {
