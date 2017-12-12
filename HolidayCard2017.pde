@@ -26,7 +26,6 @@ void setup() {
 }
 
 void draw() {
-  background(0);
   changeBackground();
   smr.displayPath();
   smr.drawSun();
