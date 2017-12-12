@@ -44,17 +44,17 @@ void draw() {
 
   fill(255);
   //textFont(christmasfont2);
-  //text(daysTillChristmas()+"", 517, 100);
+  text(daysTillChristmas()+"", 517, 100);
   //textFont(christmasfont1);
   //text(" days & until Christmas!", 580, 100);
 }
 
-//int daysTillChristmas() {
- // if (month()==12) {
-   // return 25-day();
- // }
- // return 0;
-//}
+int daysTillChristmas() {
+  if (12==12) {
+    return 25-12;
+  }
+ return 0;
+}
 
 class sunMoonRotation {
   float angle, sunx, suny, moonx, moony;
