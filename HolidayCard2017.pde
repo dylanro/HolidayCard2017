@@ -2,7 +2,7 @@ ArrayList<light> lights;
 ArrayList<snowflake> snowflakes;
 //PFont christmasfont1;
 //PFont christmasfont2;
-sunMoonRotation smr;
+//sunMoonRotation smr;
 
 void setup() {
   size(1000, 400);
@@ -11,7 +11,7 @@ void setup() {
 
   lights = new ArrayList<light>();
   snowflakes = new ArrayList<snowflake>();
-  smr = new sunMoonRotation();
+  //smr = new sunMoonRotation();
 
   for (int i = 0; i<180; i++) {
     snowflakes.add(new snowflake());
@@ -26,7 +26,7 @@ void setup() {
 }
 
 void draw() {
-  changeBackground();
+  //changeBackground();
   //smr.displayPath();
   //smr.drawSun();
   //smr.drawMoon();
