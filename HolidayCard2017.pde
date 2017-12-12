@@ -50,7 +50,7 @@ void draw() {
 }
 
 int daysTillChristmas() {
-  if (12==12) {
+  if (month()==12) {
     return 25-12;
   }
  return 0;
