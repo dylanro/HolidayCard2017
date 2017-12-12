@@ -51,7 +51,7 @@ void draw() {
 
 int daysTillChristmas() {
   if (month()==12) {
-    return 25-12;
+    return 25-day();
   }
  return 0;
 }
@@ -64,7 +64,7 @@ class sunMoonRotation {
     pathrad = (width/2)+50;
     sunrad = 45;
     moonrad = 50;
-    hour = 12;
+    hour = hour();
   }
 
   void displayPath() {
