@@ -6,8 +6,8 @@ sunMoonRotation smr;
 
 void setup() {
   size(1000, 400);
-  christmasfont1 = createFont("Miraculous&Christmas.ttf", 64);
-  christmasfont2 = createFont("PWHappyChristmas.ttf", 64);
+  //christmasfont1 = createFont("Miraculous&Christmas.ttf", 64);
+  //christmasfont2 = createFont("PWHappyChristmas.ttf", 64);
 
   lights = new ArrayList<light>();
   snowflakes = new ArrayList<snowflake>();
