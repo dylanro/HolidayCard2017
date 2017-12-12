@@ -6,8 +6,8 @@ sunMoonRotation smr;
 
 void setup() {
   size(1000, 400);
-  christmasfont1 = createFont("Miraculous&Christmas.ttf", 64);
-  christmasfont2 = createFont("PWHappyChristmas.ttf", 64);
+//  christmasfont1 = createFont("Miraculous&Christmas.ttf", 64);
+ // christmasfont2 = createFont("PWHappyChristmas.ttf", 64);
 
   lights = new ArrayList<light>();
   snowflakes = new ArrayList<snowflake>();
@@ -43,9 +43,9 @@ void draw() {
   }
 
   fill(255);
-  textFont(christmasfont2);
+//  textFont(christmasfont2);
   text(daysTillChristmas()+"", 517, 100);
-  textFont(christmasfont1);
+ // textFont(christmasfont1);
   text(" days & until Christmas!", 580, 100);
 }
 
