@@ -26,7 +26,7 @@ void setup() {
 }
 
 void draw() {
-  //changeBackground();
+  changeBackground();
   smr.displayPath();
   smr.drawSun();
   smr.drawMoon();
