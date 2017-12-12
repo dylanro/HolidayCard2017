@@ -27,14 +27,14 @@ void setup() {
 
 void draw() {
   changeBackground();
-  smr.displayPath();
-  smr.drawSun();
-  smr.drawMoon();
-  smr.timeRotation();
+  //smr.displayPath();
+  //smr.drawSun();
+  //smr.drawMoon();
+  //smr.timeRotation();
 
-  christmasTree(250, 50);
-  present(173, 305);
-  snowman(400, 250);
+  //christmasTree(250, 50);
+  //present(173, 305);
+  //snowman(400, 250);
 
   for (snowflake s : snowflakes) {
     s.display();
