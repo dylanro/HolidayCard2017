@@ -1,13 +1,13 @@
 ArrayList<light> lights;
 ArrayList<snowflake> snowflakes;
-//PFont christmasfont1;
-//PFont christmasfont2;
+PFont christmasfont1;
+PFont christmasfont2;
 sunMoonRotation smr;
 
 void setup() {
   size(1000, 400);
-  //christmasfont1 = createFont("Miraculous&Christmas.ttf", 64);
-  //christmasfont2 = createFont("PWHappyChristmas.ttf", 64);
+  christmasfont1 = createFont("Miraculous&Christmas.ttf", 64);
+  christmasfont2 = createFont("PWHappyChristmas.ttf", 64);
 
   lights = new ArrayList<light>();
   snowflakes = new ArrayList<snowflake>();
@@ -32,9 +32,9 @@ void draw() {
   smr.drawMoon();
   smr.timeRotation();
 
-  //christmasTree(250, 50);
-  //present(173, 305);
-  //snowman(400, 250);
+  christmasTree(250, 50);
+  present(173, 305);
+  snowman(400, 250);
 
   for (snowflake s : snowflakes) {
     s.display();
@@ -43,9 +43,9 @@ void draw() {
   }
 
   fill(255);
-  //textFont(christmasfont2);
+  textFont(christmasfont2);
   text(daysTillChristmas()+"", 517, 100);
-  //textFont(christmasfont1);
+  textFont(christmasfont1);
   text(" days & until Christmas!", 580, 100);
 }
 
