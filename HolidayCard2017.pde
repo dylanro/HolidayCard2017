@@ -4,6 +4,7 @@ PFont christmasfont1;
 //PFont christmasfont2;
 sunMoonRotation smr;
 int hour_;
+int day_;
 
 void setup() {
   size(1000, 400);
@@ -47,7 +48,7 @@ void draw() {
 
   fill(255);
   //textFont(christmasfont2);
-  text(daysTillChristmas()+" "+hour_, 517, 100);
+  text(daysTillChristmas()+" "+getHour() + " " + getDay(), 517, 100);
   textFont(christmasfont1);
   text(" days & until Christmas!", 580, 100);
 }
@@ -59,6 +60,14 @@ int daysTillChristmas() {
  return 0;
 }
 
+int getHour(){
+  hour_ = hour();
+}
+
+int getDay(){
+  day_ = day();
+}
+
 class sunMoonRotation {
   float angle, sunx, suny, moonx, moony;
   int pathrad, sunrad, moonrad, hour;
@@ -68,10 +77,6 @@ class sunMoonRotation {
     sunrad = 45;
     moonrad = 50;
     hour = 9;
-  }
-  
-  void updateHour(){
-    this.hour = hour();
   }
 
   void displayPath() {
