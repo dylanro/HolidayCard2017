@@ -52,7 +52,7 @@ void draw() {
 
 int daysTillChristmas() {
   if (month()==12) {
-    return 25-day();
+    return 25-10;
   }
  return 0;
 }
