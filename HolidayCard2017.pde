@@ -3,12 +3,11 @@ ArrayList<snowflake> snowflakes;
 PFont christmasfont1;
 //PFont christmasfont2;
 sunMoonRotation smr;
-int hour_;
-int day_;
+int realhour;
+int realday;
 
 void setup() {
   size(1000, 400);
-  hour_ = hour();
   christmasfont1 = loadFont("https://fonts.googleapis.com/css?family=Mountains+of+Christmas", 64);
   //christmasfont2 = createFont("PWHappyChristmas.ttf", 64);
 
@@ -29,6 +28,8 @@ void setup() {
 }
 
 void draw() {
+  realhour = hour();
+  realday = day();
   changeBackground();
   //smr.displayPath();
   smr.drawSun();
@@ -48,7 +49,7 @@ void draw() {
 
   fill(255);
   //textFont(christmasfont2);
-  text(daysTillChristmas()+" "+getHour() + " " + getDay(), 517, 100);
+  text(daysTillChristmas()+" "+realhour + " " + realday, 517, 100);
   textFont(christmasfont1);
   text(" days & until Christmas!", 580, 100);
 }
@@ -58,14 +59,6 @@ int daysTillChristmas() {
     return 25-10;
   }
  return 0;
-}
-
-int getHour(){
-  hour_ = hour();
-}
-
-int getDay(){
-  day_ = day();
 }
 
 class sunMoonRotation {
