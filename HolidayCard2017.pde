@@ -3,8 +3,8 @@ ArrayList<snowflake> snowflakes;
 PFont christmasfont1;
 //PFont christmasfont2;
 sunMoonRotation smr;
-int realhour;
-int realday;
+public int realhour;
+public int realday;
 
 void setup() {
   size(1000, 400);
@@ -63,13 +63,12 @@ int daysTillChristmas() {
 
 class sunMoonRotation {
   float angle, sunx, suny, moonx, moony;
-  int pathrad, sunrad, moonrad, hour;
+  int pathrad, sunrad, moonrad;
 
   sunMoonRotation() {
     pathrad = (width/2)+50;
     sunrad = 45;
     moonrad = 50;
-    hour = 9;
   }
 
   void displayPath() {
@@ -106,12 +105,12 @@ class sunMoonRotation {
   }
 
   void timeRotation() {
-    angle = map(hour, 0, 21, 90, 360+45);
+    angle = map(realhour, 0, 21, 90, 360+45);
   }
 }
 
 void changeBackground() {
-  int h = smr.hour;
+  int h = smr.realhour;
   if (h == 1 || h == 2) {
     background(0, 57, 76);
   } else if (h == 3 || h == 4) {
