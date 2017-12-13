@@ -64,7 +64,7 @@ class sunMoonRotation {
     pathrad = (width/2)+50;
     sunrad = 45;
     moonrad = 50;
-    hour = 9;
+    hour = hour();
   }
 
   void displayPath() {
