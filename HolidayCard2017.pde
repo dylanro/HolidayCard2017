@@ -48,15 +48,14 @@ void draw() {
   }
 
   fill(255);
+  textSize(30);
   //textFont(christmasfont2);
-  text(daysTillChristmas()+" "+realhour + " " + realday, 517, 100);
-  textFont(christmasfont1);
-  text(" days & until Christmas!", 580, 100);
+  text(daysTillChristmas()+" Days Until Christmas!", 517, 100);
 }
 
 int daysTillChristmas() {
   if (month()==12) {
-    return 25-10;
+    return 25-realday;
   }
  return 0;
 }
@@ -111,27 +110,27 @@ class sunMoonRotation {
 
 void changeBackground() {
   int h = smr.realhour;
-  if (h == 1 || h == 2) {
+  if (realhour == 1 || realhour == 2) {
     background(0, 57, 76);
-  } else if (h == 3 || h == 4) {
+  } else if (realhour == 3 || realhour == 4) {
     background(0, 76, 102);
-  } else if (h == 5 || h == 6) {
+  } else if (realhour == 5 || realhour == 6) {
     background(0, 114, 153);
-  } else if (h == 7 || h == 8) {
+  } else if (realhour == 7 || realhour == 8) {
     background(0, 152, 204);
-  } else if (h == 9 || h == 10) {
+  } else if (realhour == 9 || realhour == 10) {
     background(0, 171, 229);
-  } else if (h == 11 || h == 12) {
+  } else if (realhour == 11 || realhour == 12) {
     background(0, 191, 255);
-  } else if (h == 13 || h == 14) {
+  } else if (realhour == 13 || realhour == 14) {
     background(0, 171, 229);
-  } else if (h == 15 || h == 16) {
+  } else if (realhour == 15 || realhour == 16) {
     background(0, 152, 204);
-  } else if (h == 17 || h == 18) {
+  } else if (realhour == 17 || realhour == 18) {
     background(0, 114, 153);
-  } else if (h == 19 || h == 20) {
+  } else if (realhour == 19 || realhour == 20) {
     background(0, 76, 102);
-  } else if (h == 21 || h == 0) {
+  } else if (realhour == 21 || realhour == 0) {
     background(0, 38, 51);
   } else background(0);
 }
