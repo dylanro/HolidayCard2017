@@ -31,7 +31,7 @@ void draw() {
   smr.drawSun();
   smr.drawMoon();
   smr.timeRotation();
- // smr.updateHour();
+ smr.updateHour();
 
   christmasTree(250, 50);
   present(173, 305);
@@ -65,11 +65,10 @@ class sunMoonRotation {
     pathrad = (width/2)+50;
     sunrad = 45;
     moonrad = 50;
-    hour = 9;
   }
   
   void updateHour(){
-    this.hour = hour();
+    this.hour =  Date().getHours();
   }
 
   void displayPath() {
