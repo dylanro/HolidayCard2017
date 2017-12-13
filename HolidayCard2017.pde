@@ -31,8 +31,8 @@ void draw() {
   realhour = hour();
   realday = day();
   changeBackground();
-  fill(255,255,230);
-  rect(0,width/2+100,width,width/2);
+  fill(100,100,100);
+  rect(0,height/2,width,height/2);
   //smr.displayPath();
   smr.drawSun();
   smr.drawMoon();
