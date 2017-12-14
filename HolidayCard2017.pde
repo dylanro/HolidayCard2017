@@ -41,7 +41,7 @@ void draw() {
   rect(0,height/2+100,width,height/2+100);
 
   christmasTree(250, 80);
-  present(173, 325);
+  present(173, 325+20);
   snowman(400, 250);
 
   for (snowflake s : snowflakes) {
