@@ -40,7 +40,7 @@ void draw() {
   fill(215,215,215);
   rect(0,height/2+100,width,height/2+100);
 
-  christmasTree(250, 50);
+  christmasTree(250, mouseY);
   present(173, 305);
   snowman(400, 250);
 
