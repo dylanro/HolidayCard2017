@@ -19,12 +19,12 @@ void setup() {
     snowflakes.add(new snowflake());
   }
 
-  lights.add(new light(207, 242));
-  lights.add(new light(262, 250));
-  lights.add(new light(277, 192));
-  lights.add(new light(237, 204));
-  lights.add(new light(254, 151));
-  lights.add(new light(255, 101));
+  lights.add(new light(207, 242+20));
+  lights.add(new light(262, 250+20));
+  lights.add(new light(277, 192+20));
+  lights.add(new light(237, 204+20));
+  lights.add(new light(254, 151+20));
+  lights.add(new light(255, 101+20));
 }
 
 void draw() {
@@ -155,10 +155,10 @@ void christmasTree(float x, float y) {
   //CHORDS
   strokeWeight(3);
   stroke(255);
-  line(263, 90, 229, 106);
-  line(225, 135, 283, 153);
-  line(286, 183, 202, 204);
-  line(197, 235, 312, 250);
+  line(263, 90+20, 229, 106+20);
+  line(225, 135+20, 283, 153+20);
+  line(286, 183+20, 202, 204+20);
+  line(197, 235+20, 312, 250+20);
 
   //STAR
   star(x, y-20, .35);
