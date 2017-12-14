@@ -38,7 +38,7 @@ void draw() {
   //smr.updateHour();
   noStroke();
   fill(215,215,215);
-  rect(0,height/2+120,width,height/2+120);
+  rect(0,height/2+100,width,height/2+100);
 
   christmasTree(250, 50);
   present(173, 305);
