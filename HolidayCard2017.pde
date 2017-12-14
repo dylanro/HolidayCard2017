@@ -36,6 +36,7 @@ void draw() {
   smr.drawMoon();
   smr.timeRotation();
   //smr.updateHour();
+  noStroke();
    fill(215,215,215);
   rect(0,height/2,width,height/2);
 
