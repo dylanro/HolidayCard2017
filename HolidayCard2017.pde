@@ -31,13 +31,13 @@ void draw() {
   realhour = hour();
   realday = day();
   changeBackground();
-  fill(215,215,215);
-  rect(0,height/2,width,height/2);
   //smr.displayPath();
   smr.drawSun();
   smr.drawMoon();
   smr.timeRotation();
   //smr.updateHour();
+   fill(215,215,215);
+  rect(0,height/2,width,height/2);
 
   christmasTree(250, 50);
   present(173, 305);
