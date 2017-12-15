@@ -1,15 +1,14 @@
 ArrayList<light> lights;
 ArrayList<snowflake> snowflakes;
 PFont christmasfont1;
-//PFont christmasfont2;
+PFont christmasfont2;
 sunMoonRotation smr;
 public int realhour;
 public int realday;
 
 void setup() {
   size(1000, 400);
-  christmasfont1 = loadFont("https://fonts.googleapis.com/css?family=Mountains+of+Christmas", 64);
-  //christmasfont2 = createFont("PWHappyChristmas.ttf", 64);
+  christmasfont2 = createFont("data/PWHappyChristmas.ttf", 64);
 
   lights = new ArrayList<light>();
   snowflakes = new ArrayList<snowflake>();
@@ -52,7 +51,7 @@ void draw() {
 
   fill(255);
   textSize(30);
-  //textFont(christmasfont2);
+  textFont(christmasfont2);
   text(daysTillChristmas()+" Days Until Christmas!", 517, 100);
 }
 
