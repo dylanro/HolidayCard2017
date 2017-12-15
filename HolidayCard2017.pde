@@ -8,7 +8,7 @@ public int realday;
 
 void setup() {
   size(1000, 400);
-  christmasfont2 = createFont("data/PWHappyChristmas.ttf", 64);
+  christmasfont2 = createFont("/data/PWHappyChristmas.ttf", 64);
 
   lights = new ArrayList<light>();
   snowflakes = new ArrayList<snowflake>();
