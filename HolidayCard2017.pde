@@ -51,7 +51,7 @@ void draw() {
 
   fill(255);
   textSize(30);
-  textFont(christmasfont2);
+  //textFont(christmasfont2);
   text(daysTillChristmas()+" Days Until Christmas!", 517, 100);
 }
 
