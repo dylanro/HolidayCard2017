@@ -1,14 +1,14 @@
 ArrayList<light> lights;
 ArrayList<snowflake> snowflakes;
-PFont christmasfont1;
-PFont christmasfont2;
+//PFont christmasfont1;
+//PFont christmasfont2;
 sunMoonRotation smr;
 public int realhour;
 public int realday;
 
 void setup() {
   size(1000, 400);
-  christmasfont2 = createFont("/data/PWHappyChristmas.ttf", 64);
+ // christmasfont2 = createFont("/data/PWHappyChristmas.ttf", 64);
 
   lights = new ArrayList<light>();
   snowflakes = new ArrayList<snowflake>();
