@@ -52,7 +52,7 @@ void draw() {
   fill(255);
   textSize(30);
   //textFont(christmasfont2);
-  text(Christmas has already happened!", 517, 100);
+  text("Christmas has already happened!", 517, 100);
 }
 
 int daysTillChristmas() {
